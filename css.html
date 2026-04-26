@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mati Website</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000);
+  background-size: 400% 400%;
+  animation: bgMove 10s infinite ease;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 150px;
+
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+
+  border: 3px solid #0ff;
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px #0ff,
+              0 0 20px #0ff,
+              0 0 40px #0ff;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(236, 59, 59),
+              0 0 40px rgb(163, 10, 10),
+              0 0 60px rgba(160, 4, 4, 0.5);
+}
+
+.nav a:focus {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+
+/* CARDS */
+.cards {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+
+  animation: float 3s infinite ease-in-out;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgb(0, 0, 0),
+              0 0 50px rgb(16, 20, 20);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .nav a {
+    width: 110px;
+    height: 110px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <a href="Untitled56.html">📷<br>Photo</a>
+    <a href="Untitled css.html">🎮<br>Game</a>
+    <a href="circle.html">⚪<br>Unit2</a>
+  </div>
+
+  <!-- INFO CARDS -->
+  <div class="cards">
+
+    <div class="card">
+      <h2>📍 Address</h2>
+      <p>Addis Ababa, Ethiopia</p>
+    </div>
+
+    <div class="card">
+      <h2>📧 Email</h2>
+      <p>matiman759@email.com</p>
+    </div>
+
+    <div class="card">
+      <h2>📞 Phone</h2>
+      <p>+251 963136216</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
